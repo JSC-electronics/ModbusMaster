@@ -55,10 +55,10 @@ Set to 1 to enable debugging features within class:
 
 /* _____PROJECT INCLUDES_____________________________________________________ */
 // functions to calculate Modbus Application Data Unit CRC
-#include "util/crc16_mb.h"
+#include "utility/crc16_mb.h"
 
 // functions to manipulate words
-#include "util/word.h"
+#include "utility/word.h"
 
 
 /* _____CLASS DEFINITIONS____________________________________________________ */
