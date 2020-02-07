@@ -607,6 +607,10 @@ uint8_t ModbusMaster::ModbusMasterTransaction(uint8_t u8MBFunction)
   uint8_t u8BytesLeft = 8;
   uint8_t u8MBStatus = ku8MBSuccess;
   
+  //enable TX mode for Controllino
+  digitalWrite(75, HIGH);
+  digitalWrite(76, HIGH);
+  
   // assemble Modbus Request Application Data Unit
   u8ModbusADU[u8ModbusADUSize++] = _u8MBSlave;
   u8ModbusADU[u8ModbusADUSize++] = u8MBFunction;
@@ -720,6 +724,10 @@ uint8_t ModbusMaster::ModbusMasterTransaction(uint8_t u8MBFunction)
   {
     _postTransmission();
   }
+  
+  //enable RX mode for Controllino
+  digitalWrite(75, LOW);
+  digitalWrite(76, LOW);
   
   // loop until we run out of time or bytes, or an error occurs
   u32StartTime = millis();
