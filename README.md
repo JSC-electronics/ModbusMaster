@@ -9,6 +9,9 @@
 [license]:          LICENSE
 [code of conduct]:  CODE_OF_CONDUCT.md
 
+## Controllino Only
+This library was adapted for a concrete project on Controllino. For general-purpose projects please use original library ModbusMaster.
+
 
 ## Overview
 This is an Arduino library for communicating with Modbus slaves over RS232/485 (via RTU protocol).
